@@ -1,0 +1,34 @@
+Algorithme AnalysePhrase
+
+    // Initialisation des variables
+    longueur ← 0
+    nombreMots ← 0
+    nombreVoyelles ← 0
+    estEspace ← Vrai  // Pour détecter le début d'un nouveau mot
+
+    // Boucle pour lire chaque caractère
+    Répéter
+        Lire caractère
+        longueur ← longueur + 1
+
+        // Vérifier si le caractère est une voyelle
+        Si caractère est dans ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] Alors
+            nombreVoyelles ← nombreVoyelles + 1
+        Fin Si
+
+        // Compter les mots
+        Si caractère == ' ' Alors
+            estEspace ← Vrai
+        Sinon Si estEspace == Vrai Alors
+            nombreMots ← nombreMots + 1
+            estEspace ← Faux
+        Fin Si
+
+    Jusqu'à caractère == '.'
+
+    // Afficher les résultats
+    Afficher "Longueur de la phrase : ", longueur
+    Afficher "Nombre de mots : ", nombreMots
+    Afficher "Nombre de voyelles : ", nombreVoyelles
+
+Fin Algorithme
