@@ -1,34 +1,36 @@
-Algorithme AnalysePhrase
+Algorithme phrase
 
     // Initialisation des variables
-    longueur ← 0
-    nombreMots ← 0
-    nombreVoyelles ← 0
-    estEspace ← Vrai  // Pour détecter le début d'un nouveau mot
 
-    // Boucle pour lire chaque caractère
-    Répéter
-        Lire caractère
-        longueur ← longueur + 1
+    VAR
+        phrase := STRING;
+        nbCaracter := INTEGER;
+        nbMots := INTEGER;
+        nbVoyelles := INTEGER;
+        i = INTEGER;
+    BEGIN
+        nbCaracter = 0;
+        nbMots = 1;
+        nbVoyelles = 0;
+        write("Saisir une phrase: ");
+        READ(phrase);
 
-        // Vérifier si le caractère est une voyelle
-        Si caractère est dans ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] Alors
-            nombreVoyelles ← nombreVoyelles + 1
-        Fin Si
+        //nbCaracter
 
-        // Compter les mots
-        Si caractère == ' ' Alors
-            estEspace ← Vrai
-        Sinon Si estEspace == Vrai Alors
-            nombreMots ← nombreMots + 1
-            estEspace ← Faux
-        Fin Si
+        WHILE (phrase [i] <> ".") DO
+            nbCaracter = nbCaracter + 1;
+            i = i + 1;
+        END_WHILE
+        Write ("le nombre de caractère est de : "nbCaracter);
 
-    Jusqu'à caractère == '.'
+        FOR i FROM 0 TO nbCaracter-1 STED 1 DO
+            IF (phrase [i] === " ") THEN
+                nbMots = nbMots + 1;
+            END_IF
+        END_FOR
+        
+        Write ("le nombre de mots dans la phrase est de : "nbMots);
 
-    // Afficher les résultats
-    Afficher "Longueur de la phrase : ", longueur
-    Afficher "Nombre de mots : ", nombreMots
-    Afficher "Nombre de voyelles : ", nombreVoyelles
+        END
+        
 
-Fin Algorithme
