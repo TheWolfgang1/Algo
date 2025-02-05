@@ -36,13 +36,12 @@ Algorithme phrase
         # Parcourir chaque caractère de la phrase
             for i in phrase:
                 # Vérifier si le caractère est une voyelle
-                if i in voyelles:
-                    nbVoyelles += 1
+                if (phrase [i] === voyelles) THEN:
+                    nbVoyelles = nbVoyelles + 1
             
             # Retourner le nombre de voyelles
-            return compteur
 
-            Write(f"Le nombre de voyelles dans la phrase est : {nbVoyelles}")
+            Write(f"Le nombre de voyelles dans la phrase est : "nbVoyelles)
 
     
     END
