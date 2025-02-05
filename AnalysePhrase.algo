@@ -7,6 +7,7 @@ Algorithme phrase
         nbCaracter := INTEGER;
         nbMots := INTEGER;
         nbVoyelles := INTEGER;
+        voyelles = "aeiouyAEIOUY"
         i = INTEGER;
     BEGIN
         nbCaracter = 0;
@@ -31,6 +32,23 @@ Algorithme phrase
         
         Write ("le nombre de mots dans la phrase est de : "nbMots);
 
-        END
+
+    
+    
+    # Initialiser un compteur
+    nbVoyelles = 0
+    
+    # Parcourir chaque caractère de la phrase
+    for i in phrase:
+        # Vérifier si le caractère est une voyelle
+        if i in voyelles:
+            nbVoyelles += 1
+    
+    # Retourner le nombre de voyelles
+    return compteur
+
+    Write(f"Le nombre de voyelles dans la phrase est : {nbVoyelles}")
+
+    END
         
 
