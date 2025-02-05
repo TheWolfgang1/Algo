@@ -24,7 +24,7 @@ Algorithme phrase
         END_WHILE
         Write ("le nombre de caractère est de : "nbCaracter);
 
-        FOR i FROM 0 TO nbCaracter-1 STED 1 DO
+        FOR i FROM 0 TO nbCaracter-1 STEP 1 DO
             IF (phrase [i] === " ") THEN
                 nbMots = nbMots + 1;
             END_IF
@@ -32,17 +32,12 @@ Algorithme phrase
         
         Write ("le nombre de mots dans la phrase est de : "nbMots);
 
-
-        # Parcourir chaque caractère de la phrase
-            for i in phrase:
-                # Vérifier si le caractère est une voyelle
-                if (phrase [i] === voyelles) THEN:
-                    nbVoyelles = nbVoyelles + 1
             
-            # Retourner le nombre de voyelles
 
-            Write(f"Le nombre de voyelles dans la phrase est : "nbVoyelles)
-
+            for i FROM 0 TO nbCaracter STEP 1 DO
+                IF (phrase[i] === "e") OR (phrase[i] === "a") OR (phrase[i] === "i") OR (phrase[i] === "u") OR (phrase[i] === "o") OR (phrase[i] === "y") OR (phrase[i] === "U") OR (phrase[i] === "A") OR (phrase[i] === "E") OR (phrase[i] === [I"]) OR (phrase[i] === "Y") OR (phrase[i] === "O"):
+                nbVoyelles = nbVoyelles + 1;
+                Write("Le nombre de voyelles dans la phrase est : "nbVoyelles")
     
     END
         
